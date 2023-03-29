@@ -1,0 +1,7 @@
+{
+  "name": "ticket-45704",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
