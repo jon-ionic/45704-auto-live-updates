@@ -27,16 +27,10 @@ import './theme/variables.css';
 setupIonicReact();
 
 const App: React.FC = () => {
-  useEffect(() => {
-    // Create a function to register with the event. It hides the splash screen.
-    const onDeviceReady = () => SplashScreen.hide();
-    // When `deviceready` fires, call `onDeviceReady` to hide the splash screen.
-    document.addEventListener('deviceready', onDeviceReady);
-    // When the component unmounts, remove the event listener
-    return () => {
-      document.removeEventListener('deviceready', onDeviceReady);
-    };
-  }, []);
+  const onDeviceReady = () => SplashScreen.hide();
+  document.addEventListener('deviceready', onDeviceReady);
+  document.removeEventListener('deviceready', onDeviceReady);
+
 
   return (
     <IonApp>
